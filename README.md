@@ -58,7 +58,7 @@ git clone https://github.com/biglexj/hypr-ely-neon.git
 
 2. Copia el tema a la carpeta de temas de SDDM:
 ```bash
-sudo cp -r sddm-theme /usr/share/sddm/themes/hypr-ely-neon
+sudo cp -r hypr-ely-neon /usr/share/sddm/themes/hypr-ely-neon
 ```
 
 3. Configura SDDM para usar el tema:
