@@ -46,27 +46,31 @@ Para que el tema funcione correctamente, necesitas instalar las siguientes fuent
 ### Dependencias
 - SDDM 0.19.0 o superior
 - Qt 5.15.0 o superior
+- Módulos de Qt5 QML requeridos (necesarios para renderizar los controles y efectos de desenfoque):
+  - **Arch Linux / CachyOS**: `qt5-graphicaleffects` y `qt5-quickcontrols2`
+  - **Ubuntu / Debian**: `qml-module-qtquick-controls2` y `qml-module-qtgraphicaleffects`
+  - **Fedora**: `qt5-qtquickcontrols2` y `qt5-qtgraphicaleffects`
 - [Opcional] Teclado virtual de Qt
 
 ## 📥 Instalación
 
-### Instalación Manual
-1. Clona el repositorio:
+### 🚀 Método Automático (Recomendado)
+Para una instalación súper rápida y automática que se encarga de descargar e instalar fuentes, copiar el tema y configurar SDDM:
+
+1. Clona el repositorio y entra al directorio:
 ```bash
 git clone https://github.com/biglexj/hypr-ely-neon.git
+cd hypr-ely-neon
 ```
 
-2. Copia el tema a la carpeta de temas de SDDM:
+2. Ejecuta el script de instalación:
 ```bash
-sudo cp -r hypr-ely-neon /usr/share/sddm/themes/hypr-ely-neon
+chmod +x install.sh
+./install.sh
 ```
 
-3. Configura SDDM para usar el tema:
-```bash
-# Crear o editar el archivo de configuración
-sudo echo "[Theme]
-Current=hypr-ely-neon" | sudo tee /etc/sddm.conf
-```
+### 🛠️ Método Manual
+Si prefieres realizar la instalación paso a paso, por favor consulta nuestra [Guía de Instalación Detallada (INSTALL.md)](INSTALL.md).
 
 ## ⚙️ Personalización
 
@@ -103,6 +107,7 @@ Este tema está basado en SDDM Sugar Candy y está licenciado bajo GPLv3.
   - Tamaños de fuente en `theme.conf`
   - Dimensiones de elementos en los archivos QML
   - Posición de elementos en la interfaz
+- **Conflicto de Display Manager**: En distribuciones como CachyOS, es posible que el sistema use `plasmalogin.service` (Plasma Login Manager) u otro gestor por defecto. Si el tema no se aplica tras reiniciar, asegúrate de deshabilitar dicho servicio y habilitar `sddm.service` para que SDDM se ejecute. El script de instalación automática ya gestiona esto por ti si decides activar el tema de forma interactiva.
 
 ## 🙏 Agradecimientos
 
